@@ -1,20 +1,42 @@
- /* Responsive Design */
- @media (max-width: 1024px) {
-    .right-sidebar {
+@media (max-width: 1024px) {
+    .sidebar {
       display: none;
     }
-  
-    .container {
-      padding: 1rem;
+    .main_content {
+      width: 100%;
     }
   }
   
   @media (max-width: 768px) {
-    .sidebar {
+    .navbar {
+      width: 60px;
+    }
+    .navbar_links span {
       display: none;
     }
-  
-    .main-feed {
-      max-width: 100%;
+    .main_content {
+      margin-left: 60px;
     }
+
+    .main-container {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+      }
   }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      display: none;
+    }
+    .main_content {
+      width: 100%;
+      margin: 0;
+    }
+
+    .main-container {
+        margin-left: 0;
+        width: 100%;
+      }
+  }
+  
+  
