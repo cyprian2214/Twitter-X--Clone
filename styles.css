@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #ffffff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  }
+  
+
+.navbar {
+  width: 375px;
+  padding: 10px 10px;
+  display:inline-flex;
+  flex-direction: column;
+  top: 100px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar_logo img {
+  width: 40px;
+  height: 40px;
+
+}
+
+.navbar_links {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.navbar_links ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: rgb(2, 2, 2);
+  padding: 12px;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  border-radius: 40px;
+}
+
+.navbar_links ul {
+    list-style-type: none;
+    padding-left: 0; 
+  }
+
+.navbar_links ul a:hover {
+  background-color: rgb(239, 243, 244);
+}
+
+.navbar_links ul li a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 9999px;
+  }
+
+  .navbar_links ul li {
+    margin: 0;
+  }
+  
+  .navbar_links ul li a:hover {
+    background-color: rgb(239, 243, 244);
+  }
+  
+  .navbar-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+
+.post_button button {
+  background-color: rgb(2, 2, 2);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.main_content {
+  width: 600px;
+  border: rgb(239, 243, 244) solid 1px;
+  height: 100vh;
+}
+
+.foryou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 54px;
+  border-bottom: 1px solid rgb(239, 243, 244);
+}
+
+.foryou_header,
+.following {
+  width: 50%;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.foryou_header:hover ,.following:hover {
+  background-color: rgb(239, 243, 244);
+  cursor: pointer;
+}
+
+.post {
+    position: relative; /* Add this */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* changed from center */
+    gap: 10px;
+    padding: 0 16px;
+    border-bottom: 1px solid rgb(239, 243, 244);
+    height: 155px; /* Adjust height to make room for button */
+  }
+
+.profile-pic {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    top: 20px;
+    position: relative;
+}
+
+.profile-pic p a {
+    color: black;
+    text-decoration: none;
+}
+
+.profile-pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.inputbar input {
+  flex: 1;
+  width: 518px;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.post-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonandicons {
+    display: flex;
+    height: 40px;
+    border-top: 1px solid rgb(239, 243, 244);
+    width: 100%;
+    align-content: center;
+    margin-top: 8px;
+  }
+
+.posts_button button {
+  position: absolute; /* New */
+  right: 16px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 79px;
+  height: 36px;
+  margin-top: 8px;
+}
+
+.posts_button button:hover {
+  background-color: rgb(36, 158, 240);
+}
+
+.post_icons {
+    width: calc(566px - 79px);
+    padding-left: 20px;
+}
+
+.post_icons ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+    list-style: none;
+    align-content: center;
+    width: calc(100%-79px);
+}
+
+ul li img {
+    width: 25px;
+    height: 40px;
+    object-fit: cover;
+    padding-top: 20px;
+  }
+
+.show-posts {
+    display: flex;
+  height: 50px;
+  border-bottom: 1px solid rgb(239, 243, 244);
+  align-items: center;
+  justify-content: center;
+}
+
+.show-posts:hover {
+    background-color: rgb(239, 243, 244);
+    cursor: pointer;
+}
+
+.show-posts p {
+    font-size: 15px;
+    color: rgb(29, 155, 240);
+
+}
+
+.main_content {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.main_content .hero {
+    width: 100%;
+}
+
+.tweet-card {
+    width: 100%;
+    border: 1px solid rgb(239, 243, 244);
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 0;
+  }
+  
+  .tweet-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tweet-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  
+  .tweet-user span {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .tweet-content {
+    margin: 12px 0;
+    font-size: 16px;
+  }
+  
+  .tweet-image img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 12px 0;
+  }
+  
+  .tweet-footer {
+    display: flex;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+  }
+  .post_buttons {
+    width: 100%;
+  }
+  
+  .post_buttons ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* leave space for the post button */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post_buttons ul li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }  
+  
+  .post_buttons ul li img {
+    width: 20px;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+/* Hover effects for each icon */
+.reply:hover img {
+    filter: invert(34%) sepia(84%) saturate(749%) hue-rotate(185deg) brightness(90%) contrast(92%);
+  }
+  
+  .repost:hover img {
+    filter: invert(42%) sepia(89%) saturate(843%) hue-rotate(90deg) brightness(93%) contrast(95%);
+  }
+  
+  .like:hover img {
+    filter: invert(25%) sepia(100%) saturate(746%) hue-rotate(305deg) brightness(95%) contrast(91%);
+  }
+  
+  .poll:hover img,
+  .share:hover img {
+    filter: invert(34%) sepia(84%) saturate(749%) hue-rotate(185deg) brightness(90%) contrast(92%);
+  }
+  
+  
+/* Sidebar */
+.sidebar {
+  width: 350px;
+  padding: 20px;
+}
+
+.searchbar input {
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50px;
+  border: 1px solid rgb(239, 243, 244);
+}
+
+.subscribe,
+.live,
+.trending {
+  margin-top: 20px;
+  border: 1px solid rgb(239, 243, 244);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.subscribe button {
+  margin-top: 10px;
+  background: rgb(29, 155, 240);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.subscribe p {
+    font-size: 14px;
+}
+
+.trending ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trending li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
